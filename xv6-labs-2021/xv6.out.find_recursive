@@ -1,0 +1,15 @@
+
+xv6 kernel is booting
+
+hart 2 starting
+hart 1 starting
+init: starting sh
+$ mkdir zM3y8EQz
+$ echo > zM3y8EQz/DiPOv4e3
+$ mkdir zM3y8EQz/jflE7qSC
+$ echo > zM3y8EQz/jflE7qSC/DiPOv4e3
+$ mkdir zN7jk6eo
+$ echo > zN7jk6eo/DiPOv4e3
+$ find . DiPOv4e3
+exec find failed
+$ qemu-system-riscv64: terminating on signal 15 from pid 3039 (make)
