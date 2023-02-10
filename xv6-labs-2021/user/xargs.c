@@ -16,9 +16,9 @@ int main(int argc, char* argv[]){
         exit(1);
     }
     for(int i = 1; i < argc; i++){
-        fullargv[i-1] = argv[i];
+        fullargv[i-1] = argv[i]; // 一共有argc-1个参数
     }
-    fullargv[argc] = 0; // 一共有argc-1个参数
+    fullargv[argc] = 0;   // 第argc+1个，pointer=0 为分隔符
 
     // 还有部分通过管道输入的，在标准输入里
     while(1){ // 循环执行一行
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
         }
         if(i==0) break; // 没有标准输入
         buf[i] = 0; //分隔符
-        fullargv[argc-1] = buf;
+        fullargv[argc-1] = buf; // 第argc个
         if(fork()==0){
             exec(fullargv[0], fullargv);
             exit(0);
